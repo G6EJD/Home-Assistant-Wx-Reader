@@ -506,7 +506,6 @@ String calc_zambretti(int zpressure, int month, float windDirection, float windS
 //#########################################################################################
 String ZCode(String msg) {
   //Serial.println("MSG = " + msg);
-  lcd.setSwapBytes(true);
   lcd.setSwapBytes(false); 
   int x_pos = 395;
   int y_pos = 245;
@@ -615,17 +614,17 @@ String ZCode(String msg) {
   }
   if (msg == "U") {
     //Icon = "https://openweathermap.org/img/wn/09d@2x.png";
-    lcd.pushImage(x_pos, y_pos, icon_x_size, icon_y_size, (lgfx::rgb565_t*)sun_cloud_rain);
+    lcd.pushImage(x_pos, y_pos, icon_x_size, icon_y_size, (lgfx::rgb565_t*)rain);
     message = "Rain at times, worst later";
   }
   if (msg == "V") {
     //Icon = "https://openweathermap.org/img/wn/09d@2x.png";
-    lcd.pushImage(x_pos, y_pos, icon_x_size, icon_y_size, (lgfx::rgb565_t*)sun_cloud_rain);
+    lcd.pushImage(x_pos, y_pos, icon_x_size, icon_y_size, (lgfx::rgb565_t*)rain);
     message = "Rain, becoming very unsettled";
   }
   if (msg == "W") {
     //Icon = "https://openweathermap.org/img/wn/09d@2x.png";
-    lcd.pushImage(x_pos, y_pos, icon_x_size, icon_y_size, (lgfx::rgb565_t*)sun_cloud_rain);
+    lcd.pushImage(x_pos, y_pos, icon_x_size, icon_y_size, (lgfx::rgb565_t*)rain);
     message = "Rain at frequent intervals";
   }
   if (msg == "X") {
