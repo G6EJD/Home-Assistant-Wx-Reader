@@ -499,10 +499,10 @@ String calc_zambretti(int zpressure, int month, float windDirection, float windS
 //#########################################################################################
 // LCD Image Converter
 // New file, then import image
-// Conversion, set R5G6B5
+// Option, Conversion, set R5G6B5
 // Leave at defaults
 // Image, set 16-bit
-// Preview and copy all binary, paste in code
+// Preview and then copy all binary, paste in code
 //#########################################################################################
 String ZCode(String msg) {
   //Serial.println("MSG = " + msg);
@@ -554,12 +554,12 @@ String ZCode(String msg) {
   }
   if (msg == "I") {
     //Icon = "https://openweathermap.org/img/wn/10d@2x.png";
-    lcd.pushImage(x_pos, y_pos, icon_x_size, icon_y_size, (lgfx::rgb565_t*)sun_cloud_rain);
+    lcd.pushImage(x_pos, y_pos, icon_x_size, icon_y_size, (lgfx::rgb565_t*)showers_improving);
     message = "Showery early, improving";
   }
   if (msg == "J") {
     //Icon = "https://openweathermap.org/img/wn/10d@2x.png";
-    lcd.pushImage(x_pos, y_pos, icon_x_size, icon_y_size, (lgfx::rgb565_t*)sun_cloud_rain);
+    lcd.pushImage(x_pos, y_pos, icon_x_size, icon_y_size, (lgfx::rgb565_t*)showers_improving);
     message = "Changeable, improving";
   }
   if (msg == "K") {
@@ -569,7 +569,7 @@ String ZCode(String msg) {
   }
   if (msg == "L") {
     //Icon = "https://openweathermap.org/img/wn/04d@2x.png";
-    lcd.pushImage(x_pos, y_pos, icon_x_size, icon_y_size, (lgfx::rgb565_t*)clouds);
+    lcd.pushImage(x_pos, y_pos, icon_x_size, icon_y_size, (lgfx::rgb565_t*)showers_improving);
     message = "Rather unsettled, clear later";
   }
   if (msg == "M") {
